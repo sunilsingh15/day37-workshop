@@ -1,0 +1,19 @@
+<h2>Upload your picture here!</h2>
+<table>
+  <tr>
+    <td>Picture: </td>
+    <td><input type="file" #file /></td>
+  </tr>
+  <tr>
+    <td>Comments:</td>
+    <td><textarea cols="30" rows="10" #comments></textarea></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><button type="submit" (click)="processForm()">Upload</button></td>
+  </tr>
+</table>
+
+<div *ngIf="postID">
+  <p>Your file has been successfully uploaded with post ID <code>{{ postID }}</code>.</p>
+</div>
